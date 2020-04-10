@@ -79,20 +79,19 @@ function music() {
 
   function movie() {
 
-//     * Title of the movie.
-//     * Year the movie came out.
-//     * IMDB Rating of the movie.
-//     * Rotten Tomatoes Rating of the movie.
-//     * Country where the movie was produced.
-//     * Language of the movie.
-//     * Plot of the movie.
-//     * Actors in the movie.
-//   ```
+    if (command === "movie-this" && process.argv[3] === undefined){
+        input = "Sleepless in Seattle";
+    }
+    
+    var OMDBUrl = `http://www.omdbapi.com/?t=${input}&y=&plot=short&apikey=trilogy`;
 
-// * If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
+    axios.get(OMDBUrl).then(
+    function(response) {
+    console.log(`\nMovie Title: ${response.data.Title}\nRelease Year: ${response.data.Released}\n
+    \nIMDB Rating: ${response.data.Rated}\nRotten Tomatoes Rating: ${response.data.Ratings[1].Value}
+    \nProduced In: ${response.data.Country}\nLanguage: ${response.data.Language}
+    \nPlot: ${response.data.Plot}\nActors: ${response.data.Actors}`);
+    });
 
-//   * If you haven't watched "Mr. Nobody," then you should: <http://www.imdb.com/title/tt0485947/>
-
-//   * It's on Netflix!
 
   }
