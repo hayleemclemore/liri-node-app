@@ -1,6 +1,5 @@
 # liri-node-app
 
-
 1. Clearly state the problem the app is trying to solve (i.e. what is it doing and why)
 2. Give a high-level overview of how the app is organized
 3. Give start-to-finish instructions on how to run the app
