@@ -52,46 +52,66 @@ function concert() {
   });
 }
 
-
 function music() {
+  //   * If no song is provided then your program will default to "The Sign" by Ace of Base.
+  if (command === "spotify-this-song" && process.argv[3] === undefined) {
+    input = "The Sign";
+  }
 
-    //   * If no song is provided then your program will default to "The Sign" by Ace of Base.
-    if (command === "spotify-this-song" && process.argv[3] === undefined){
-        input = "The Sign";
-    }
-
-    spotify.search({ type: 'track', query:input, limit:1 }, function(err, data) {
-        if (err) {
-          return console.log('Error occurred: ' + err);
-        }
-
-        else {
-            console.log(`\nArtist: ${data.tracks.items[0].artists[0].name} 
+  spotify.search({ type: "track", query: input, limit: 1 }, function (
+    err,
+    data
+  ) {
+    if (err) {
+      return console.log("Error occurred: " + err);
+    } else {
+      console.log(`\nArtist: ${data.tracks.items[0].artists[0].name} 
             \nSong Name: ${data.tracks.items[0].name}
             \nPreview: ${data.tracks.items[0].preview_url}
             \nAlbum Name: ${data.tracks.items[0].album.name} 
-            \n\n######################################\n`); 
-        }
-         
-      });
+            \n\n######################################\n`);
+    }
+  });
+}
+
+function movie() {
+  if (command === "movie-this" && process.argv[3] === undefined) {
+    input = "Sleepless in Seattle";
   }
 
+  var OMDBUrl = `http://www.omdbapi.com/?t=${input}&y=&plot=short&apikey=trilogy`;
 
-  function movie() {
-
-    if (command === "movie-this" && process.argv[3] === undefined){
-        input = "Sleepless in Seattle";
-    }
-    
-    var OMDBUrl = `http://www.omdbapi.com/?t=${input}&y=&plot=short&apikey=trilogy`;
-
-    axios.get(OMDBUrl).then(
-    function(response) {
+  axios.get(OMDBUrl).then(function (response) {
     console.log(`\nMovie Title: ${response.data.Title}\nRelease Year: ${response.data.Released}\n
     \nIMDB Rating: ${response.data.Rated}\nRotten Tomatoes Rating: ${response.data.Ratings[1].Value}
     \nProduced In: ${response.data.Country}\nLanguage: ${response.data.Language}
     \nPlot: ${response.data.Plot}\nActors: ${response.data.Actors}`);
-    });
+  });
+}
 
+function random() {
+  fs.readFile("random.txt", "utf8", function (error, data) {
+    // If the code experiences any errors it will log the error to the console.
+    if (error) {
+      return console.log(error);
+    }
 
-  }
+    // Then split it by commas (to make it more readable)
+    var dataArr = data.split(",");
+
+    if (dataArr[0] === "concert-this") {
+      input = dataArr[1];
+      concert();
+    }
+    else if (dataArr[0] === "spotify-this-song"){
+      input = dataArr[1];
+      music();
+    }
+    else if (dataArr[0] === "movie-this"){
+      input = dataArr[1];
+      movie();
+    }
+    console.log("You need to put in a valid command")
+  });
+  
+}
