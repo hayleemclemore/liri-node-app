@@ -2,13 +2,14 @@ require("dotenv").config();
 
 var keys = require("./key.js");
 
-//grab the axious package
+//grab the axios package
 var axios = require("axios");
 
 //grab and read the random.txt file
 var fs = require("fs");
 
 var moment = require("moment");
+
 
 //grab the spotify package and initialize
 var Spotify = require("node-spotify-api");
@@ -22,15 +23,19 @@ console.log(command, input);
 switch (command) {
   case "concert-this":
     concert();
+    log();
     break;
   case "spotify-this-song":
     music();
+    log();
     break;
   case "movie-this":
     movie();
+    log();
     break;
   case "do-what-it-says":
     random();
+    log();
     break;
   default:
     console.log("Please submit a valid request");
@@ -115,3 +120,22 @@ function random() {
   });
   
 }
+
+
+function log() {
+  // This block of code will create a file called "movies.txt".
+// It will then print "Inception, Die Hard" in the file
+fs.appendFile("log.txt",`(${command}, ${input}), `, function(err) {
+
+  // If the code experiences any errors it will log the error to the console.
+  if (err) {
+    return console.log(err);
+  }
+
+  // Otherwise, it will print: "movies.txt was updated!"
+  console.log("log.txt was updated!");
+
+});
+
+}
+
