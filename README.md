@@ -19,6 +19,8 @@ This is a repository for the LIRI app, a Language Interpretation and Recognition
    * `do-what-it-says`
 
 ## Screenshots: 
+![concert-this](./assets/images/concert-this.png)
+Format: ![Alt Text](url)
 
 ## link to a deployed version of the app
 
