@@ -23,13 +23,13 @@ The purpose was to use "backend" technologies only. Node.js was used along with 
 
    Running each of these commands in your terminal/bash window will do the following:
 
-   * node liri.js concert-this 'concert or band name'
+   ### node liri.js concert-this 'concert or band name'
             * Name of the Venue
             * Location of the Venue
             * Date of the Event
             ![results](./assets/images/concert-this.png)
 
-   * node liri.js spotify-this-song 'song name'
+   ### node liri.js spotify-this-song 'song name'
             * Artist(s)
             * Song Name
             * Album
@@ -39,19 +39,17 @@ The purpose was to use "backend" technologies only. Node.js was used along with 
             If a song name isn't given, the liri bot will default to searching for 'The Sign.'  
     
     ### node liri.js movie-this 'movie name'
-```bash
-        Movie Title
-        Release Year
-        IMDB Rating
-        Country Produced in
-        Language of the film
-        Plot
-        Actors in Movie
-        Rotten Tomatoes Rating
+        * Movie Title
+        * Release Year
+        * IMDB Rating
+        * Country Produced in
+        * Language of the film
+        * Plot
+        * Actors in Movie
+        *Rotten Tomatoes Rating
         ![results](./assets/images/movie-this.png)
 
         If a movie name isn't given, the liri bot will default to searching for 'Jaws'  
-```
 
    ### node liri.js do-what-it-says
 
@@ -63,7 +61,7 @@ The purpose was to use "backend" technologies only. Node.js was used along with 
 
 
 ## Links
-    [Repository](https://github.com/hayleemclemore/liri-node-app)
+    [repository](https://github.com/hayleemclemore/liri-node-app)
 
 ## Technologies used in the app:
     * Javascript
