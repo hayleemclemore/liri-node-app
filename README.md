@@ -23,41 +23,42 @@ The purpose was to use "backend" technologies only. Node.js was used along with 
 
    Running each of these commands in your terminal/bash window will do the following:
 
-   ### node liri.js concert-this 'concert or band name'
+### node liri.js concert-this 'concert or band name'
             * Name of the Venue
             * Location of the Venue
             * Date of the Event
-    ![results](./assets/images/concert-this.png)
 
-   ### node liri.js spotify-this-song 'song name'
-        * Artist(s)
-        * Song Name
-        * Album
-        * Song Preview Link
+![results](./assets/images/concert-this.png)
 
-        If a song name isn't given, the liri bot will default to searching for 'The Sign.'  
+### node liri.js spotify-this-song 'song name'
+    * Artist(s)
+    * Song Name
+    * Album
+    * Song Preview Link
 
-    ![results](./assets/images/spotify-this-song.png)
+    If a song name isn't given, the liri bot will default to searching for 'The Sign.'  
+
+![results](./assets/images/spotify-this-song.png)
     
-    ### node liri.js movie-this 'movie name'
-        * Movie Title
-        * Release Year
-        * IMDB Rating
-        * Country Produced in
-        * Language of the film
-        * Plot
-        * Actors in Movie
-        * Rotten Tomatoes Rating
-    ![results](./assets/images/movie-this.png)
- 
-        If a movie name isn't given, the liri bot will default to searching for 'Jaws'
+### node liri.js movie-this 'movie name'
+    * Movie Title
+    * Release Year
+    * IMDB Rating
+    * Country Produced in
+    * Language of the film
+    * Plot
+    * Actors in Movie
+    * Rotten Tomatoes Rating
+    If a movie name isn't given, the liri bot will default to searching for 'Jaws'
 
-   ### node liri.js do-what-it-says
+![results](./assets/images/movie-this.png)
 
-   LIRI will use the text inside of random.txt and use it to call the first command as the command, and the second command as the input.
+### node liri.js do-what-it-says
 
-   The random.txt file includes: concert-this,tame impala
-    ![results](./assets/images/do-what-it-says.png)
+LIRI will use the text inside of random.txt and use it to call the first command as the command, and the second command as the input.
+
+The random.txt file includes: concert-this,tame impala
+![results](./assets/images/do-what-it-says.png)
 
 
 
