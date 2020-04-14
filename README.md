@@ -38,21 +38,22 @@ The purpose was to use "backend" technologies only. Node.js was used along with 
 
             If a song name isn't given, the liri bot will default to searching for 'The Sign.'  
     
-
-   *  node liri.js movie-this 'movie name'
-            * Movie Title
-            * Release Year
-            * IMDB Rating
-            * Country Produced in
-            * Language of the film
-            * Plot
-            * Actors in Movie
-            * Rotten Tomatoes Rating
-            ![results](./assets/images/movie-this.png)
+    ### node liri.js movie-this 'movie name'
+```bash
+        Movie Title
+        Release Year
+        IMDB Rating
+        Country Produced in
+        Language of the film
+        Plot
+        Actors in Movie
+        Rotten Tomatoes Rating
+        ![results](./assets/images/movie-this.png)
 
         If a movie name isn't given, the liri bot will default to searching for 'Jaws'  
+```
 
-   * node liri.js do-what-it-says
+   ### node liri.js do-what-it-says
 
    LIRI will use the text inside of random.txt and use it to call the first command as the command, and the second command as the input.
 
