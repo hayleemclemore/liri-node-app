@@ -13,7 +13,6 @@ The purpose was to use "backend" technologies only. Node.js was used along with 
     It can take in any of the following commands:
 
    * **`concert-this`**
-        
 
    * **`spotify-this-song`**
 
@@ -28,15 +27,17 @@ The purpose was to use "backend" technologies only. Node.js was used along with 
         1. Name of the Venue
         2. Location of the Venue
         3. Date of the Event
-        
+        ![results](./assets/images/concert-this.png)
 
    * node liri.js spotify-this-song 'song name'
         1. Artist(s)
         2. Song Name
         3. Album
         4. Song Preview Link
+        ![results](./assets/images/spotify-this-song.png)
 
         If a song name isn't given, the liri bot will default to searching for 'The Sign.'  
+    
 
    * node liri.js movie-this 'movie name'
         1. Movie Title
@@ -47,10 +48,17 @@ The purpose was to use "backend" technologies only. Node.js was used along with 
         6. Plot
         7. Actors in Movie
         8. Rotten Tomatoes Rating
+        ![results](./assets/images/movie-this.png)
 
         If a movie name isn't given, the liri bot will default to searching for 'Jaws'  
 
-   * **`do-what-it-says`**
+   * node liri.js do-what-it-says
+
+   LIRI will use the text inside of random.txt and use it to call the first command as the command, and the second command as the input.
+
+   The random.txt file includes: concert-this,tame impala
+    ![results](./assets/images/do-what-it-says.png)
+
 
 ## Screenshots: 
 ![concert-this](./assets/images/concert-this.png)
