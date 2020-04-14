@@ -27,16 +27,17 @@ The purpose was to use "backend" technologies only. Node.js was used along with 
             * Name of the Venue
             * Location of the Venue
             * Date of the Event
-            ![results](./assets/images/concert-this.png)
+    ![results](./assets/images/concert-this.png)
 
    ### node liri.js spotify-this-song 'song name'
-            * Artist(s)
-            * Song Name
-            * Album
-            * Song Preview Link
-            ![results](./assets/images/spotify-this-song.png)
+        * Artist(s)
+        * Song Name
+        * Album
+        * Song Preview Link
 
-            If a song name isn't given, the liri bot will default to searching for 'The Sign.'  
+        If a song name isn't given, the liri bot will default to searching for 'The Sign.'  
+
+    ![results](./assets/images/spotify-this-song.png)
     
     ### node liri.js movie-this 'movie name'
         * Movie Title
@@ -46,10 +47,10 @@ The purpose was to use "backend" technologies only. Node.js was used along with 
         * Language of the film
         * Plot
         * Actors in Movie
-        *Rotten Tomatoes Rating
-        ![results](./assets/images/movie-this.png)
-
-        If a movie name isn't given, the liri bot will default to searching for 'Jaws'  
+        * Rotten Tomatoes Rating
+    ![results](./assets/images/movie-this.png)
+ 
+        If a movie name isn't given, the liri bot will default to searching for 'Jaws'
 
    ### node liri.js do-what-it-says
 
@@ -61,7 +62,7 @@ The purpose was to use "backend" technologies only. Node.js was used along with 
 
 
 ## Links
-    [repository](https://github.com/hayleemclemore/liri-node-app)
+[repository](https://github.com/hayleemclemore/liri-node-app)
 
 ## Technologies used in the app:
     * Javascript
