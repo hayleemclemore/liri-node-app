@@ -3,8 +3,7 @@
 This is a repository for the LIRI app, a Language Interpretation and Recognition Interface. LIRI is a command line node app that takes in parameters and returns data.
 
 ## Clearly state the problem the app is trying to solve (i.e. what is it doing and why)
-The intention of this app was to utilize 
-The purpose was to use "backend" technologies only. Node.js was used along with NPM (Node Package Manager) libraries in order to accomplish the tasks. There is no front end to this application, therefore this is no html page to publish.
+The intention of this app was to utilize "backend" technologies only. Node.js was used along with NPM (Node Package Manager) libraries in order to accomplish the tasks. There is no front end to this application, therefore this is no html page to publish.
 
 ## Give a high-level overview of how the app is organized
 
